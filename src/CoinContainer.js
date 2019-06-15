@@ -28,10 +28,12 @@ class CoinContainer extends Component {
       spin: false,
       betOn: null
     };
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   flipCoin() {
     const newCoin = choice(this.props.coins);
+
     this.setState(st => {
       let newState = {
         ...st,
@@ -41,6 +43,7 @@ class CoinContainer extends Component {
         lose: st.lose + (newCoin.side !== this.state.betOn ? 1 : 0),
         spin: true
       };
+      console.log(newCoin);
       setTimeout(() => {
         this.setState({ spin: false });
       }, 500);
@@ -48,12 +51,22 @@ class CoinContainer extends Component {
     });
   }
 
-  handleClick(e) {
-    this.setState({
-      betOn: e
+  async handleClick(e) {
+    await this.setState(() => {
+      return { betOn: e };
     });
+    console.log(this.state.betOn);
     this.flipCoin();
   }
+  // handleClick(e) {
+  //   this.setState(() => {
+  //     return { betOn: e };
+  //   });
+  //   console.log(this.state.betOn);
+  //   setTimeout(() => {
+  //     this.flipCoin();
+  //   }, 10);
+  // }
 
   render() {
     return (
