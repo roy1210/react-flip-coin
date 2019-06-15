@@ -1,0 +1,26 @@
+.Coin img {
+  width: 200px;
+  height: 200px;
+}
+
+.Coin-spinning img {
+  width: 200px;
+  height: 200px;
+  animation-name: spin;
+  animation-duration: 1s;
+  ;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(1000deg);
+  }
+
+  100% {
+    transform: rotateY(10deg);
+  }
+}
