@@ -80,14 +80,14 @@ class CoinContainer extends Component {
         {this.state.win > 0 && (
           <div className="CoinContainer-win">
             <h2>
-              Congrats, You <span>win</span> {this.state.win} times.
+              Congrats, You <span>won</span> {this.state.win} times.
             </h2>
           </div>
         )}
         {this.state.lose > 0 && (
           <div className="CoinContainer-lose">
             <h2>
-              Oh no, You <span>lose</span> {this.state.lose} times.
+              Oh no, You <span>lost</span> {this.state.lose} times.
             </h2>
           </div>
         )}
