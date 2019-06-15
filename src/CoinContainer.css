@@ -1,3 +1,20 @@
+.CoinContainer button {
+  font-size: 1.1em;
+  align-self: center;
+  width: 7em;
+  padding: 0.3em;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  margin-top: 0.5em;
+}
+
+.CoinContainer button:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
+}
+
 .Coin img {
   width: 200px;
   height: 200px;
