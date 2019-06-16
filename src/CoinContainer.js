@@ -43,7 +43,6 @@ class CoinContainer extends Component {
         lose: st.lose + (newCoin.side !== this.state.betOn ? 1 : 0),
         spin: true
       };
-      console.log(newCoin);
       setTimeout(() => {
         this.setState({ spin: false });
       }, 500);
@@ -55,7 +54,6 @@ class CoinContainer extends Component {
     await this.setState(() => {
       return { betOn: e };
     });
-    console.log(this.state.betOn);
     this.flipCoin();
   }
   // handleClick(e) {
@@ -89,19 +87,34 @@ class CoinContainer extends Component {
         >
           {this.state.spin ? "Flipping..." : "Bet on Dog-coin"}
         </button>
-        <h4>Out of {this.state.nFlips} flips</h4>
-        {this.state.win > 0 && (
+        {/* <h4>Out of {this.state.nFlips} flips</h4> */}
+        {this.state.win > this.state.lose && (
           <div className="CoinContainer-win">
             <h2>
-              Congrats, You <span>won</span> {this.state.win} times.
+              Congrats, you have <span>won</span> {this.state.win} /{" "}
+              {this.state.nFlips} times
             </h2>
           </div>
         )}
-        {this.state.lose > 0 && (
+        {this.state.lose > this.state.win && (
           <div className="CoinContainer-lose">
             <h2>
-              Oh no, You <span>lost</span> {this.state.lose} times.
+              Oh no, you have <span>lost</span> {this.state.lose} /{" "}
+              {this.state.nFlips} times
             </h2>
+          </div>
+        )}
+        {this.state.lose === this.state.win && this.state.nFlips > 0 && (
+          <div className="CoinContainer-even">
+            <h2>
+              Now, we are <span>even</span>
+            </h2>
+            <div className="CoinContainer-win">
+              <h2>
+                We both have <span>won</span> {this.state.win} /{" "}
+                {this.state.nFlips} times
+              </h2>
+            </div>
           </div>
         )}
       </div>

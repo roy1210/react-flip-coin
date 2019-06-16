@@ -17,12 +17,17 @@
 
 .CoinContainer-win span {
   font-size: 1.2em;
-  color: red;
+  color: red !important;
 }
 
 .CoinContainer-lose span {
   font-size: 1.1em;
   color: blue;
+}
+
+.CoinContainer-even span {
+  font-size: 1.1em;
+  color: green;
 }
 
 .Coin img {
@@ -37,7 +42,6 @@
   height: 200px;
   animation-name: spin;
   animation-duration: 1s;
-  ;
 }
 
 @keyframes spin {
