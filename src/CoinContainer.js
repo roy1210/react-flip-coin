@@ -105,10 +105,12 @@ class CoinContainer extends Component {
           </div>
         )}
         {this.state.lose === this.state.win && this.state.nFlips > 0 && (
-          <div className="CoinContainer-even">
-            <h2>
-              Now, we are <span>even</span>
-            </h2>
+          <div>
+            <div className="CoinContainer-even">
+              <h2>
+                Now, we are <span>even</span>
+              </h2>
+            </div>
             <div className="CoinContainer-win">
               <h2>
                 We both have <span>won</span> {this.state.win} /{" "}
