@@ -113,7 +113,7 @@ class CoinContainer extends Component {
             </div>
             <div className="CoinContainer-win">
               <h2>
-                We both have <span>won</span> {this.state.win} /{" "}
+                We have both <span>won</span> {this.state.win} /{" "}
                 {this.state.nFlips} times
               </h2>
             </div>
