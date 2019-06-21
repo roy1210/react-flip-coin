@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import { choice } from "./helpers";
 import Coin from "./Coin";
 import "./CoinContainer.css";
+import Bitcoin from "./img/Bitcoin.png";
+import DogCoin from "./img/DogCoin.png";
 
 class CoinContainer extends Component {
   static defaultProps = {
     coins: [
       {
         side: "bitcoin",
-        imgSrc:
-          "https://cdn.shopify.com/s/files/1/1277/7365/products/bitcoin-ag-obverse_740x.png?v=1547616796"
+        imgSrc: <img src={Bitcoin} alt="Bitcoin" />
       },
       {
         side: "dog-coin",
-        imgSrc:
-          "https://www.wildtornado.com/blog/wp-content/uploads/2018/08/0f21b-dog-291x300.png"
+        imgSrc: <img src={DogCoin} alt="DogCoin" />
       }
     ]
   };
