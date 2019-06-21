@@ -1,6 +1,6 @@
 # Flip-coin
 
-![React_preview](./src/ScreenShot.gif)
+![React_preview](./src/img/screenshot.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
