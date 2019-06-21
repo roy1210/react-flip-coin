@@ -2,21 +2,10 @@ import React, { Component } from "react";
 import { choice } from "./helpers";
 import Coin from "./Coin";
 import "./CoinContainer.css";
-import Bitcoin from "./img/Bitcoin.png";
-import DogCoin from "./img/DogCoin.png";
 
 class CoinContainer extends Component {
   static defaultProps = {
-    coins: [
-      {
-        side: "bitcoin",
-        imgSrc: <img src={Bitcoin} alt="Bitcoin" />
-      },
-      {
-        side: "dog-coin",
-        imgSrc: <img src={DogCoin} alt="DogCoin" />
-      }
-    ]
+    coins: [{ side: "bitcoin" }, { side: "dog-coin" }]
   };
   constructor(props) {
     super(props);

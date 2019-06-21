@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import "./CoinContainer.css";
+import Bitcoin from "./img/Bitcoin.png";
+import DogCoin from "./img/DogCoin.png";
 
 class Coin extends Component {
   render() {
+    let pic;
+    if (this.props.info.side === "bitcoin") {
+      pic = <img src={Bitcoin} alt={this.props.info.side} />;
+    } else if (this.props.info.side === "dog-coin") {
+      pic = <img src={DogCoin} alt={this.props.info.side} />;
+    }
+
     return (
       <div className={this.props.spinning ? "Coin-spinning" : "Coin"}>
-        <img src={this.props.info.imgSrc} alt={this.props.info.side} />
+        {pic}
       </div>
     );
   }
