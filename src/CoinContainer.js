@@ -43,7 +43,13 @@ class CoinContainer extends Component {
     await this.setState(() => {
       return { betOn: e };
     });
-    this.flipCoin();
+    if (this.state.currCoin === null) {
+      // to wait for photo loading
+      setTimeout(this.flipCoin(), 100);
+    } else {
+      this.flipCoin();
+    }
+    // this.flipCoin();
   }
   // handleClick(e) {
   //   this.setState(() => {
