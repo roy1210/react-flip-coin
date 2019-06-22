@@ -1,33 +1,43 @@
 .CoinContainer button {
   font-size: 1.1em;
   align-self: center;
-  width: 8em;
-  padding: 0.3em;
-  border: 0px;
-  border-radius: 10px;
-  color: white;
-  background-color: black;
+  width: 10em;
+  /* padding: 0.3em; */
+  /* border: 0px; */
+  /* border-radius: 10px; */
+  /* color: white; */
+  /* background-color: black; */
   margin: 0.5em;
+  /* shape */
+  color: #1d9af2;
+  background-color: #292d3e;
+  border: 1px solid #1d9af2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
 }
 
 .CoinContainer button:hover {
-  background-color: darkslateblue;
-  cursor: pointer;
+  background-color: black;
+  border-radius: 25%;
 }
 
 .CoinContainer-win span {
   font-size: 1.2em;
-  color: red;
+  color: seagreen;
 }
 
 .CoinContainer-lose span {
   font-size: 1.1em;
-  color: blue;
+  color: tomato;
 }
 
 .CoinContainer-even span {
   font-size: 1.1em;
-  color: green;
+  color: wheat;
 }
 
 .Coin img {
