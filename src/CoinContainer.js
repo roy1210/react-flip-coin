@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { choice } from "./helpers";
 import Coin from "./Coin";
 import "./CoinContainer.css";
+import Bitcoin from "./img/Bitcoin.png";
+import DogCoin from "./img/DogCoin.png";
 
 class CoinContainer extends Component {
   static defaultProps = {
@@ -114,6 +116,12 @@ class CoinContainer extends Component {
             </div>
           </div>
         )}
+
+        {/* Mount the picture to avoid lag */}
+        <div style={{ display: "none" }}>
+          <img src={Bitcoin} alt="bitcoin" />
+          <img src={DogCoin} alt="Dogcoin" />
+        </div>
       </div>
     );
   }
