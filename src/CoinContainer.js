@@ -52,7 +52,7 @@ class CoinContainer extends Component {
     const mountPhoto = (
       <div style={{ display: "none" }}>
         <img src={Bitcoin} alt="bitcoin" />
-        <img src={DogCoin} alt="Dogcoin" />
+        <img src={DogCoin} alt="dog-coin" />
       </div>
     );
 
