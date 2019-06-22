@@ -45,27 +45,22 @@ class CoinContainer extends Component {
     await this.setState(() => {
       return { betOn: e };
     });
-    if (this.state.currCoin === null) {
-      // to wait for photo loading
-      setTimeout(this.flipCoin(), 100);
-    } else {
-      this.flipCoin();
-    }
-    // this.flipCoin();
+    this.flipCoin();
   }
-  // handleClick(e) {
-  //   this.setState(() => {
-  //     return { betOn: e };
-  //   });
-  //   console.log(this.state.betOn);
-  //   setTimeout(() => {
-  //     this.flipCoin();
-  //   }, 10);
-  // }
 
   render() {
+    const mountPhoto = (
+      <div style={{ display: "none" }}>
+        <img src={Bitcoin} alt="bitcoin" />
+        <img src={DogCoin} alt="Dogcoin" />
+      </div>
+    );
+
     return (
       <div className="CoinContainer">
+        {/* Mount photo to avoid lag. display: none */}
+        {mountPhoto}
+
         <h2 className="CoinContainer-fade-in one">
           Flip a coin, challenge me!
         </h2>
@@ -116,12 +111,6 @@ class CoinContainer extends Component {
             </div>
           </div>
         )}
-
-        {/* Mount the picture to avoid lag */}
-        <div style={{ display: "none" }}>
-          <img src={Bitcoin} alt="bitcoin" />
-          <img src={DogCoin} alt="Dogcoin" />
-        </div>
       </div>
     );
   }
