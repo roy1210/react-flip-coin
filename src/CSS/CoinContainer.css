@@ -43,6 +43,7 @@
 .Coin img {
   width: 200px;
   height: 200px;
+  margin: 1em auto;
 }
 
 /* Spin */
@@ -52,6 +53,7 @@
   height: 200px;
   animation-name: spin;
   animation-duration: 1s;
+  margin: 1em auto;
 }
 
 @keyframes spin {
