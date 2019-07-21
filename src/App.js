@@ -1,6 +1,6 @@
 import React from "react";
 import CoinContainer from "./CoinContainer";
-import "./App.css";
+import "./CSS/App.css";
 
 function App() {
   return (

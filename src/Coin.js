@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./CoinContainer.css";
+import "./CSS/CoinContainer.css";
 import Bitcoin from "./img/Bitcoin.png";
 import DogCoin from "./img/DogCoin.png";
 

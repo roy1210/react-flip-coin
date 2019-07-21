@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { choice } from "./helpers";
 import Coin from "./Coin";
-import "./CoinContainer.css";
+import "./CSS/CoinContainer.css";
 import Bitcoin from "./img/Bitcoin.png";
 import DogCoin from "./img/DogCoin.png";
 
