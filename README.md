@@ -17,6 +17,8 @@ $ npm install
 $ npm start
 ```
 
+Also, be able to install this app and run as Progressive Web App
+
 ## Requirement
 
 - npm
